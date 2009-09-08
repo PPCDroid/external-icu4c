@@ -150,6 +150,13 @@
  * @stable ICU 2.0
  */
 
+#ifdef __powerpc__
+
+#undef U_IS_BIG_ENDIAN
+#define U_IS_BIG_ENDIAN	1
+
+#endif
+
 /**
  * \def U_ICUDATA_TYPE_LITLETTER
  * The non-string form of U_ICUDATA_TYPE_LETTER
