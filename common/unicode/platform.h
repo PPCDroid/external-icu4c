@@ -190,6 +190,7 @@ typedef unsigned int uint32_t;
 /* Determines the endianness of the platform
    It's done this way in case multiple architectures are being built at once.
    For example, Darwin supports fat binaries, which can be both PPC and x86 based. */
+#include <endian.h>
 #if defined(BYTE_ORDER) && defined(BIG_ENDIAN)
 #define U_IS_BIG_ENDIAN (BYTE_ORDER == BIG_ENDIAN)
 #else
